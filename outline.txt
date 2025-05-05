@@ -1,0 +1,13 @@
+Class: Cards
+    object: number value
+    object: suit
+Class: Deck
+    holds the cards
+Class: Dealer 
+    creates bets and acts as AI player
+    Prompts bet and matches it
+    Deals cards (two to player, 1 open/1 hidden to dealer)
+    Prompts Player to 
+Class: player
+    ability to place bet
+

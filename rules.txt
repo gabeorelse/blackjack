@@ -1,0 +1,5 @@
+1. The player plays against the dealer
+2. The dealer plays their first card face up and their second card face down.
+3. The goal of the game is to get closer to 21 than the dealer WITHOUT going over 21.
+4. King, Queen, Jack is 10. Ace can be 11 or 1.
+5. If the player beats the dealer, they win the pot. If they get 21, they win double.
