@@ -2,19 +2,21 @@ import random
 
 class Cards:
     number_value = ['Ace', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King']
-    suit = ['Spade', 'Heart', 'Diamond', 'Club']
+    suit = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
 
     def __init__(self):
         pass
+    
+    def createDeck(self):
+        deck = [(str(number_value) + ' of ' + suit) for number_value in self.number_value for suit in self.suit]
+        return deck
 
-    def shuffleCards(self):
-        random.shuffle(self.number_value)
-        random.shuffle(self.suit)
-        for number in self.number_value:
-            for suit_value in self.suit:
-                print(number, suit_value)
-            
+        
+    def shuffleCards(self, deck):
+        random.shuffle(deck)
+        print(deck[0])
+        print(deck[1])
 
-
-deck = Cards()
-deck.shuffleCards()
+shuffle = Cards()
+new_deck = shuffle.createDeck()
+shuffle.shuffleCards(new_deck)
