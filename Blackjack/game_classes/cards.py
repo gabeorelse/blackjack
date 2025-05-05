@@ -14,9 +14,10 @@ class Cards:
         
     def shuffleCards(self, deck):
         random.shuffle(deck)
-        print(deck[0])
-        print(deck[1])
 
+
+'''
 shuffle = Cards()
 new_deck = shuffle.createDeck()
 shuffle.shuffleCards(new_deck)
+'''
