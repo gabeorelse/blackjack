@@ -1,21 +1,31 @@
 from .cards import Cards
+import random
 
 class Dealer():
-    def __init__(self, bet):
-        self.bet = bet
+    def __init__(self):
+        self.deck = []
+        self.dealer_play = []
 
-    def take_bet(self):
-        return self.bet
-
-    def match_bet(self):
-        self.bet += self.bet
-        return self.bet
+    def match_bet(self, bet):
+        bet += bet
+        return bet
+    
+    def shuffle_cards(self):
+        shuffle = Cards()
+        self.deck = shuffle.createDeck()
+        shuffle.shuffleCards(self.deck)
+        return self.deck
     
     def deal_cards(self):
-        shuffle = Cards()
-        new_deck = shuffle.createDeck()
-        shuffle.shuffleCards(new_deck)
-        print(new_deck[0])
-        print(new_deck[1])
-        dealer_play = [new_deck[2], new_deck[3]]
-        print("Dealer's Hand: " + dealer_play[0])
+        print("Your Hand is:\n")
+        print(self.deck[0])
+        print(self.deck[1])
+        self.dealer_play = [self.deck[2], self.deck[3]]
+        print("Dealer's Hand: " + self.dealer_play[0])
+
+    def next_card(self):
+        new_card = random.randint(4, len(self.deck)-1)
+        return self.deck[new_card]
+
+    def stand_play(self):
+        return self.dealer_play
